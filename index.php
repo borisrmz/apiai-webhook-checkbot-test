@@ -27,13 +27,20 @@ if($method == 'POST'){
 			else{
 				$resultado = "insertado papu!";
 			}*/
+			if($resultado == "conectado")
+			{
 			$query="INSERT INTO USUARIOS VALUES (NULL,'PRUEBA3','123',1,'20170928', 1,'20170928',1)";
 			$stmt = $mysqli->prepare($query);
 			$stmt->execute();
 				   			
 			$speech = $resultado;
 			$stmt->close();
+		}
+		else{
+$speech = $resultado;
+		}
 			break;
+		
 
 		case 'lugares':
 			$speech = "Aqui va un listado de lugares";
