@@ -8,25 +8,19 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
-
+/*
 		$mysqli = new mysqli("mysql5005.smarterasp.net", "9f5ddc_chkbot", "Checkbot3", "db_9f5ddc_chkbot");
 		if ($mysqli->connect_errno) {
-		    /*echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;*/
 		    $resultado = "error al conectar";
 		}
 		else{
 			$resultado = "conectado";
-		}
+		}*/
 
 	switch ($text) {
 		case 'hoteles':
 
-			/*if(!$mysqli->query("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA2','123',1,'20170928', 1,'20170928',1)")){
-				$resultado = "si conecte, pero no pude insertar :(" . $mysqli->errno . ") " . $mysqli->error;
-			}
-			else{
-				$resultado = "insertado papu!";
-			}*/
+		/*
 			if($resultado == "conectado")
 			{
 			$query="INSERT INTO USUARIOS VALUES (NULL,'PRUEBA3','123',1,'20170928', 1,'20170928',1)";
@@ -38,7 +32,8 @@ if($method == 'POST'){
 		}
 		else{
 $speech = $resultado;
-		}
+		}*/
+		$speech = "Estos son los hoteles";
 			break;
 		
 
@@ -56,6 +51,18 @@ $speech = $resultado;
 	}
 
 	$response = new \stdClass();
+	$response->speech = $speech;
+	$response->displayText = $speech;
+	$response->source = "webhook";
+	echo json_encode($response);
+
+		$response = new \stdClass();
+	$response->speech = $speech;
+	$response->displayText = $speech;
+	$response->source = "webhook";
+	echo json_encode($response);
+
+		$response = new \stdClass();
 	$response->speech = $speech;
 	$response->displayText = $speech;
 	$response->source = "webhook";
