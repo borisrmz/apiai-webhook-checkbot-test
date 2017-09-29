@@ -9,7 +9,7 @@ if($method == 'POST'){
 
 	$text = $json->result->parameters->text;
 
-		$mysqli = new mysqli("mysql5005.smarterasp.net", "9f5ddc_chkbot", "Checkbot3". "9f5ddc_chkbot");
+		$mysqli = new mysqli("mysql5005.smarterasp.net", "9f5ddc_chkbot", "Checkbot3", "9f5ddc_chkbot");
 		if ($mysqli->connect_errno) {
 		    /*echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;*/
 		    $resultado = "error al conectar";
