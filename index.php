@@ -9,7 +9,7 @@ if($method == 'POST'){
 
 	$text = $json->result->parameters->text;
 
-		$mysqli = new mysqli("mysql5005.smarterasp.net", "9f5ddc_chkbot", "Checkbot3");
+		$mysqli = new mysqli("mysql5005.smarterasp.net", "9f5ddc_chkbot", "Checkbot3". "9f5ddc_chkbot");
 		if ($mysqli->connect_errno) {
 		    /*echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;*/
 		    $resultado = "error al conectar";
@@ -20,18 +20,19 @@ if($method == 'POST'){
 
 	switch ($text) {
 		case 'hoteles':
-		     $mysqli->query("USE 9f5ddc_chkbot");
 
-			if(!$mysqli->query("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA2','123',1,'20170928', 1,'20170928',1)")){
+			/*if(!$mysqli->query("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA2','123',1,'20170928', 1,'20170928',1)")){
 				$resultado = "si conecte, pero no pude insertar :(" . $mysqli->errno . ") " . $mysqli->error;
 			}
 			else{
 				$resultado = "insertado papu!";
-			}
+			}*/
+			$query="INSERT INTO USUARIOS VALUES (NULL,'PRUEBA3','123',1,'20170928', 1,'20170928',1)";
+			$stmt = $mysqli->prepare($query);
+			$stmt->execute();
 				   			
-
-				$speech = $resultado;
-			
+			$speech = $resultado;
+			$stmt->close();
 			break;
 
 		case 'lugares':
