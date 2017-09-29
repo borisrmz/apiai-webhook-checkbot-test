@@ -21,7 +21,7 @@ if($method == 'POST'){
 	switch ($text) {
 		case 'hoteles':
 
-			$mysqli->query("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA','123','ME','20170928', 'ME','20170928',1)")
+			$mysqli->query("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA','123','ME','20170928', 'ME','20170928',1)");
 				   			
 
 				$speech = $resultado;
