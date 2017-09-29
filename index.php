@@ -20,9 +20,10 @@ if($method == 'POST'){
 
 	switch ($text) {
 		case 'hoteles':
-			/*	IF (!$MYSQLI->QUERY("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA','123','ME','20170928', 'ME','20170928',1)")) {
+		
+			IF (!$MYSQLI->QUERY("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA','123','ME','20170928', 'ME','20170928',1)")) {
 				    ECHO "FALLÓ LA CREACIÓN DE LA TABLA: (" . $MYSQLI->ERRNO . ") " . $MYSQLI->ERROR;
-				}*/
+				
 
 				$speech = $resultado;
 
