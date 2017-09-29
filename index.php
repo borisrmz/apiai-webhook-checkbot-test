@@ -10,6 +10,7 @@ if($method == 'POST'){
 	$text = $json->result->parameters->text;
 
 	switch ($text) {
+
 		case 'hoteles':
 
 		$speech = "Estos son los hoteles";
@@ -36,7 +37,7 @@ if($method == 'POST'){
 	$response->source = "webhook";
 	echo json_encode($response);
 
-
+}
 else
 {
 	echo "Method not allowed";
