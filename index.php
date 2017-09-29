@@ -22,7 +22,7 @@ if($method == 'POST'){
 		case 'hoteles':
 
 			if(!$mysqli->query("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA2','123',1,'20170928', 1,'20170928',1)")){
-				$resultado = "si conecte, pero no pude insertar :(";
+				$resultado = "si conecte, pero no pude insertar :(" . $mysqli->errno . ") " . $mysqli->error;
 			}
 			else{
 				$resultado = "insertado papu!";
