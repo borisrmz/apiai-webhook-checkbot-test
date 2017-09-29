@@ -20,8 +20,9 @@ if($method == 'POST'){
 
 	switch ($text) {
 		case 'hoteles':
+		     $mysqli->query("USE 9f5ddc_chkbot");
 
-			if(!$mysqli->query("USE 9f5ddc_chkbot; INSERT INTO USUARIOS VALUES (NULL,'PRUEBA2','123',1,'20170928', 1,'20170928',1);")){
+			if(!$mysqli->query("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA2','123',1,'20170928', 1,'20170928',1)")){
 				$resultado = "si conecte, pero no pude insertar :(" . $mysqli->errno . ") " . $mysqli->error;
 			}
 			else{
@@ -30,7 +31,7 @@ if($method == 'POST'){
 				   			
 
 				$speech = $resultado;
-
+			
 			break;
 
 		case 'lugares':
