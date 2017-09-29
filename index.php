@@ -56,18 +56,7 @@ $speech = $resultado;
 	$response->source = "webhook";
 	echo json_encode($response);
 
-		$response = new \stdClass();
-	$response->speech = $speech;
-	$response->displayText = $speech;
-	$response->source = "webhook";
-	echo json_encode($response);
 
-		$response = new \stdClass();
-	$response->speech = $speech;
-	$response->displayText = $speech;
-	$response->source = "webhook";
-	echo json_encode($response);
-}
 else
 {
 	echo "Method not allowed";
