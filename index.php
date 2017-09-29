@@ -1,15 +1,5 @@
 <?php 
 
-$mysqli = new mysqli("mysql5005.smarterasp.net", "9f5ddc_chkbot", "Checkbot3");
-if ($mysqli->connect_errno) {
-    /*echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;*/
-    $resultado = "error al conectar";
-}
-else{
-	$resultado = "conectado";
-}
-
-
 $method = $_SERVER['REQUEST_METHOD'];
 
 // Process only when method is POST
@@ -17,7 +7,16 @@ if($method == 'POST'){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$text = $json->result->parameters->request;
+	$text = $json->result->parameters->text;
+
+		$mysqli = new mysqli("mysql5005.smarterasp.net", "9f5ddc_chkbot", "Checkbot3");
+		if ($mysqli->connect_errno) {
+		    /*echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;*/
+		    $resultado = "error al conectar";
+		}
+		else{
+			$resultado = "conectado";
+		}
 
 	switch ($text) {
 		case 'hoteles':
