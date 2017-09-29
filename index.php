@@ -2,11 +2,12 @@
 
 $mysqli = new mysqli("mysql5005.smarterasp.net", "9f5ddc_chkbot", "Checkbot3");
 if ($mysqli->connect_errno) {
-    echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    /*echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;*/
+    $resultado = "error al conectar";
 }
-
-
-
+else{
+	$resultado = "conectado";
+}
 
 
 $method = $_SERVER['REQUEST_METHOD'];
@@ -20,11 +21,11 @@ if($method == 'POST'){
 
 	switch ($text) {
 		case 'hoteles':
-				if (!$mysqli->query("INSERT INTO usuarios values (null,'prueba','123','me','20170928', 'me','20170928',1)")) {
-				    echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
-				}
+			/*	IF (!$MYSQLI->QUERY("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA','123','ME','20170928', 'ME','20170928',1)")) {
+				    ECHO "FALLÓ LA CREACIÓN DE LA TABLA: (" . $MYSQLI->ERRNO . ") " . $MYSQLI->ERROR;
+				}*/
 
-				$speech = "Aqui va un listado de hoteles";
+				$speech = $resultado;
 
 			break;
 
