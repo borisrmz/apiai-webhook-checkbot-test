@@ -21,7 +21,12 @@ if($method == 'POST'){
 	switch ($text) {
 		case 'hoteles':
 
-			$mysqli->query("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA','123','ME','20170928', 'ME','20170928',1)");
+			if(!$mysqli->query("INSERT INTO USUARIOS VALUES (NULL,'PRUEBA','123','ME','20170928', 'ME','20170928',1)")){
+				$resultado = "si conecte, pero no pude insertar :(";
+			}
+			else{
+				$resultado = "insertado papu!";
+			}
 				   			
 
 				$speech = $resultado;
