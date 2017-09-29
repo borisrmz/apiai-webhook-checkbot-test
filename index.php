@@ -8,32 +8,12 @@ if($method == 'POST'){
 	$json = json_decode($requestBody);
 
 	$text = $json->result->parameters->text;
-/*
-		$mysqli = new mysqli("mysql5005.smarterasp.net", "9f5ddc_chkbot", "Checkbot3", "db_9f5ddc_chkbot");
-		if ($mysqli->connect_errno) {
-		    $resultado = "error al conectar";
-		}
-		else{
-			$resultado = "conectado";
-		}*/
 
 	switch ($text) {
 		case 'hoteles':
 
-		/*
-			if($resultado == "conectado")
-			{
-			$query="INSERT INTO USUARIOS VALUES (NULL,'PRUEBA3','123',1,'20170928', 1,'20170928',1)";
-			$stmt = $mysqli->prepare($query);
-			$stmt->execute();
-				   			
-			$speech = $resultado;
-			$stmt->close();
-		}
-		else{
-$speech = $resultado;
-		}*/
 		$speech = "Estos son los hoteles";
+
 			break;
 		
 
