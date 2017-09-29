@@ -20,14 +20,7 @@ if($method == 'POST'){
 
 	switch ($text) {
 		case 'hoteles':
-			
-			
-
-				if (!$mysqli->query("INSERT INTO states (null, 'test','20170928','20170928','20170928')")) {
-				    echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
-				}
-
-				if (!$mysqli->query("INSERT INTO usuarios (null,'prueba','123','me','20170928', 'me','20170928','1')")) {
+				if (!$mysqli->query("INSERT INTO usuarios values (null,'prueba','123','me','20170928', 'me','20170928',1)")) {
 				    echo "Falló la creación de la tabla: (" . $mysqli->errno . ") " . $mysqli->error;
 				}
 
