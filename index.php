@@ -13,17 +13,17 @@ if($method == 'POST'){
 
 		case 'hoteles':
 
-		$speech = "Estos son los hoteles";
+		$speech = "Actualmente tenemos los siguientes hoteles: 1. Posada de fidel";
 
 			break;
 		
 
 		case 'lugares':
-			$speech = "Aqui va un listado de lugares";
+			$speech = "Tengo hoteles en: 1. San Pedro Pinula, Jalapa";
 			break;
 
 		case 'ayuda':
-			$speech = "Aqui la ayuda";
+			$speech = "Ingresa el nombre de un hotel o lugar. Por ejemplo: Jalapa, Posada de Fidel";
 			break;
 		
 		default:
